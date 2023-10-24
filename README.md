@@ -1,5 +1,16 @@
-# MyApi
+# Angular-Bank
 
+## Principais Recursos:
+- Potencializado pelo Angular: Desenvolvido com Angular para uma interface robusta e responsiva.
+- Integração com API Java: Conecta-se perfeitamente com a API baseada em Java para recuperação de dados.
+- Conteúdo Dinâmico: Oferece atualizações em tempo real para aprimorar a interação do usuário.
+
+## Objetivos do Projeto:
+- Criar uma aplicação moderna e amigável ao usuário com o Angular.
+- Aproveitar a API baseada em Java para acessar dados dinâmicos.
+- Fomentar uma experiência personalizada e orientada por dados.
+
+##ANGULAR INFO
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server
