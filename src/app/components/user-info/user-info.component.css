@@ -1,0 +1,19 @@
+.user-info{
+  align-items:flex-start;
+  color: white;
+  height: 30vh;
+
+}
+.user-container{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.account-container{
+  display: flex;
+  flex-direction: row;
+}
+.account-agency h3{
+margin-right: 20px;
+}

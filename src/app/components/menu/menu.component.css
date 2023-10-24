@@ -1,0 +1,22 @@
+
+.menu-list ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-list ul li{
+  margin-right: 20px;
+  list-style: none;
+}
+.menu-list ul li a{
+  font-family: 'segoe UI';
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: transform;
+}
+.menu-list ul li a:hover{
+  font-size: large;
+  transform: .8;
+}
+
