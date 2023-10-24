@@ -11,6 +11,7 @@
 - Fomentar uma experiência personalizada e orientada por dados.
 
 ##ANGULAR INFO
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server
