@@ -1,9 +1,13 @@
 .bigcard-container{
   margin: auto;
   width: 80%;
-  height: 30%;
+  height: 50%;
   background-color: white;
+  margin-top: 20px;
+  padding-top: 15px;
   border: 2px solid gray;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 .bigcard-info{
   display: flex;
