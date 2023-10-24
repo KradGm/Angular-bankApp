@@ -10,7 +10,7 @@
 - Aproveitar a API baseada em Java para acessar dados dinâmicos.
 - Fomentar uma experiência personalizada e orientada por dados.
 
-##ANGULAR INFO
+## Angular Instructions
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
