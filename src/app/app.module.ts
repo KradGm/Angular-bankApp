@@ -9,7 +9,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FormsModule } from '@angular/forms';
-import { BigCardComponent } from './components/big-card/big-card.component'; // Importe o FormsModule aqui
+import { BigCardComponent } from './components/big-card/big-card.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
+import { SmallCardComponent } from './components/small-card/small-card.component'; // Importe o FormsModule aqui
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { BigCardComponent } from './components/big-card/big-card.component'; // 
     MenuComponent,
     LoginPageComponent,
     HomePageComponent,
-    BigCardComponent
+    BigCardComponent,
+    CardInfoComponent,
+    SmallCardComponent
   ],
   imports: [
     BrowserModule,

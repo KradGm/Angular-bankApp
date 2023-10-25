@@ -1,8 +1,18 @@
-.header-bg{
-  background-color: red;
-}
+
 .header-menu{
+  background-color: red;
   padding-top: 10px;
   display: flex;
   justify-content: center;
+}
+.red-bg{
+  background: linear-gradient(to bottom, red 50%, white 50%);
+}
+.small-cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 80%;
+  height: 80%;
 }

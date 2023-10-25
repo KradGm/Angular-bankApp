@@ -1,0 +1,10 @@
+@media screen and (min-width: 320px) {
+  .menu-list ul li a {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 728px) {
+  .menu-list ul li a {
+    font-size: larger;
+  }
+}

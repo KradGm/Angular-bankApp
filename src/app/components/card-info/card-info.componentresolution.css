@@ -1,0 +1,27 @@
+@media screen and (min-width: 320px) {
+
+}
+@media screen and (min-width: 728px) {
+  .card-container{
+    background: rgb(121,9,9);
+    background: linear-gradient(0deg, rgba(121,9,9,1) 32%, rgba(250,55,55,1) 99%);
+    width: 80%;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    color: white;
+  }
+  .card-digits{
+    font-weight: bolder;
+    font-size: x-large;
+    padding-left: 1rem
+  }
+  .card-text{
+    font-size: x-large;
+
+  }
+}
+@media screen and (min-width: 1280px) {
+
+}
+

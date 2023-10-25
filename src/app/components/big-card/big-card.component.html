@@ -1,7 +1,7 @@
 <div class="bigcard-container">
   <div class="bigcard-info">
     <div class="bigcard-moneyicon">
-      <img src="assets/money.png" alt="little icon">
+      <img class="icon" src="{{imgCover}}" alt="little icon">
     </div>
     <div class="bigcard-value-text">
       <p>Saldo disponivel</p>
@@ -9,5 +9,16 @@
   </div>
   <div class="bigcard-values">
     <h2>R$ {{accountValue}},00</h2>
+    <div class="bigcard-total">
+      <p>Saldo + Limite: R$ {{accountTotal}}</p>
+
+    </div>
+  </div>
+
+  <div class="bigcard-extrato">
+    <hr>
+    <div class="extrato-text">
+      <a href="/">Ver extrato</a>
+    </div>
   </div>
 </div>

@@ -1,0 +1,20 @@
+.card-container{
+  background: rgb(121,9,9);
+  background: linear-gradient(0deg, rgba(121,9,9,1) 32%, rgba(250,55,55,1) 99%);
+  width: 80%;
+  margin: auto;
+  height: 2rem;
+  display: flex;
+  color: white;
+}
+.card-infos{
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
+}
+.card-digits{
+  font-weight: bold;
+  padding-left: 1rem
+}

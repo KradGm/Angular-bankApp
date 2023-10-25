@@ -1,0 +1,35 @@
+.small-card-container{
+  margin: auto;
+  width: 25vw;
+  height: 15vh;
+  background-color: white;
+  padding-top: 15px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  transition: transform;
+}
+.small-card-container:hover{
+  scale: 1.1;
+  transform: .8;
+}
+.small-card-content{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+
+}
+
+.small-card-content p {
+  margin: auto;
+}
+.icon{
+  color:  red;
+  height: 30px;
+  width: 30px;
+}
+

@@ -1,0 +1,16 @@
+@media screen and (min-width: 320px) {
+  .user-name {
+    font-size: medium;
+  }
+}
+@media screen and (min-width: 728px) {
+  .user-name {
+    font-size: x-large;
+  }
+  .account-agency{
+    font-size: x-large;
+  }
+  .account-number{
+    font-size: x-large;
+  }
+}

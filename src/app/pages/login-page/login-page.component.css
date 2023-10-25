@@ -1,48 +1,47 @@
-.login-container{
-  width: 70vw;
+.login-container {
+  width: 80vw;
   height: 70vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 0;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.521);
+
   background-color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
 }
-.login-text{
+
+.login-text {
   font-family: 'segoe UI';
 }
-.login-text h2{
-padding-top: 10%;
-font-size: medium;
-padding-left: 5%;
-color: black;
-}
 
-.login-input{
-  width: 100%;
-  margin: auto;
+.login-text h2 {
+  padding-top: 10%;
+  font-size: medium;
   padding-left: 5%;
-  padding-right: 5%;
-
+  color: black;
 }
 
-.login-input {
-  border: 0;
-  padding: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.521);
-}
-.login-input input{
+.login-input input {
   width: 100%;
   border: none;
   border-bottom: 1px solid red;
+  height: 40px;
+  padding-left: 10px;
 }
 
-.login-button{
+.login-button {
   margin-top: 5%;
   height: 100%;
 }
-.login-button input{
+
+.login-button input {
   width: 100%;
   color: white;
   font-family: 'segoe UI';
@@ -51,5 +50,3 @@ color: black;
   background-color: red;
   border-radius: 15px;
 }
-
-

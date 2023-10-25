@@ -9,19 +9,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MyapiService {
-  private baseURL:string=""
-  private userInfo:User | any
+  private baseURL: string = ""
+  private userInfo: User | any
 
   constructor(private http: HttpClient) {
     this.baseURL = environment.myApi;
-   }
+  }
 
-  getUser(id:number): Observable<User>{
-    this.userInfo = this
-                    .http
-                    .get<User>
-                    (`${this.baseURL}${id}`);
-
-    return this.userInfo
+  getUser(id: number): Observable<User> {
+    return this.http.get<User>(`${this.baseURL} ${id}`);
   }
 }

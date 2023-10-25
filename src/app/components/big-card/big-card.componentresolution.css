@@ -1,0 +1,48 @@
+@media screen and (min-width: 320px) {
+  .bigcard-values {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 728px) {
+  .bigcard-container {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    padding-top: 20px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .bigcard-value-text {
+    font-size: x-large;
+    padding-left: 15px;
+  }
+  .bigcard-moneyicon {
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 36px;
+    height: 36px;
+  }
+  .bigcard-moneyicon img{
+    width: 36px;
+    height: 36px;
+    padding-bottom: 10px;
+  }
+  .bigcard-values{
+    font-size: x-large;
+  }
+  .extrato-text{
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1280px) {
+
+}
+

@@ -1,27 +1,62 @@
-.bigcard-container{
+* {
+  color: black;
+}
+
+.bigcard-container {
   margin: auto;
   width: 80%;
-  height: 50%;
+  height: 80%;
   background-color: white;
-  margin-top: 20px;
   padding-top: 15px;
-  border: 2px solid gray;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-.bigcard-info{
+.icon{
+  height: 25px;
+  width: 25px;
+}
+.bigcard-info {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  padding-left: 5px;
+  justify-content: flex-start;
+  padding-left: 10px;
 }
-.bigcard-value-text p{
-color: rgb(71, 71, 71);
+
+.bigcard-value-text p {
+  color: rgb(71, 71, 71);
 }
-.bigcard-moneyicon{
-  margin-top: 2px;
-  margin-right: 5px;
-}
-.bigcard-values{
+
+.bigcard-values {
   color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+
+.bigcard-values h2 {
+  font-weight: 600;
+}
+.bigcard-extrato{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.bigcard-extrato a{
+  text-decoration: none;
+  color: red;
+  transition: transform;
+}
+.bigcard-extrato a:hover{
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  scale: 1.1;
+}
+.extrato-text{
+  display: flex;
+}
+.extrato-text a {
+  margin: auto;
 }
