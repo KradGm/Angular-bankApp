@@ -34,6 +34,14 @@ export class RegisterPageComponent implements OnInit {
         description: '',
       },
     ],
+    history: [
+      {
+        value:0,
+        userName:'',
+        transactionDate: new Date,
+        description:''
+      }
+    ]
   };
 
   constructor(private service: MyapiService) {}
@@ -44,18 +52,15 @@ export class RegisterPageComponent implements OnInit {
     // Crie uma cópia profunda dos dados do formulário para futureUser
     const futureUser: User = JSON.parse(JSON.stringify(this.formData));
 
-    // Remova o campo 'id' do objeto (se necessário)
+    // Remover Id
     delete futureUser.id;
 
     this.service.create(futureUser).subscribe({
       next: (res) => {
-        // Manipular uma resposta bem-sucedida
         console.log('Solicitação bem-sucedida', res);
       },
       error: (error) => {
-        // Manipular um erro
         console.error('Erro na solicitação', error);
-        // Exibir uma mensagem de erro para o usuário
       }
     });
     console.log(futureUser)

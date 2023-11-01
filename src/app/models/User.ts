@@ -38,4 +38,5 @@ export type User = {
   card: Card;
   features: Feature[];
   news: News[];
+  history:History[];
 };
