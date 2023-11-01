@@ -1,0 +1,22 @@
+<form (ngSubmit)="submitForm()">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="nameText" [(ngModel)]="formData.name" required>
+
+  <label for="name">Account Number</label>
+  <input type="text" id="number" name="numberName" [(ngModel)]="formData.account.number" required>
+  <label for="name">Account Agency</label>
+  <input type="text" id="agency" name="agencyName" [(ngModel)]="formData.account.agency" required>
+  <label for="name">Account Balance</label>
+  <input type="text" id="balance" name="balanceNumber" [(ngModel)]="formData.account.balance" required>
+  <label for="name">Account Limit</label>
+  <input type="text" id="limit" name="limitNumber" [(ngModel)]="formData.account.limit" required>
+
+  <label for="name">Card number</label>
+  <input type="text" id="numberCard" name="numberText" [(ngModel)]="formData.card.number" required>
+  <label for="name">Card limit</label>
+  <input type="text" id="limitCard" name="limitText" [(ngModel)]="formData.card.limit" required>
+
+  <!-- Repita o processo para outros campos do formulário, como account, card, features, news, e history -->
+
+  <button type="submit">Enviar</button>
+</form>

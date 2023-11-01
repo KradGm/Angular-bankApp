@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MyapiService } from 'src/app/services/myapi.service';
-import { User, Account } from 'src/app/models/User';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AccountDataService } from 'src/app/services/account-data.service';
 
 @Component({
@@ -10,20 +9,23 @@ import { AccountDataService } from 'src/app/services/account-data.service';
   styleUrls: ['./user-info.component.css', './user-info.componentresolution.css']
 })
 export class UserInfoComponent implements OnInit {
-  id!: number;
-  userName: string = ''; // Variável para armazenar o nome do usuário
-  accountNumber: string = ''; // Variável para armazenar o número da conta
-  agency: string = ''; // Variável para armazenar a agência
+  @Input() id!: number;
+  userName: string = '';
+  accountNumber: string = '';
+  agency: string = '';
+
   constructor(
     private service: MyapiService,
     private route: ActivatedRoute,
-    private accountService: AccountDataService
+    private accountService: AccountDataService,
+    private router: Router
   ) {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
-      this.id = +idParam
+      this.id = +idParam;
     }
   }
+
   ngOnInit(): void {
     this.getUser(this.id);
   }
@@ -34,11 +36,13 @@ export class UserInfoComponent implements OnInit {
         this.userName = res.name;
         this.accountNumber = res.account.number;
         this.agency = res.account.agency;
-
         this.accountService.setBalance(res.account.balance);
-        console.log(res)
       },
     });
   }
 
+  goToAdminPage() {
+    // Redirecionar para a página de administração se o ID for 1
+    this.router.navigate(['/app', this.id, 'adm-login']);
+  }
 }

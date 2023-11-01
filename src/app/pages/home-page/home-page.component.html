@@ -13,12 +13,15 @@
   <app-small-card
   imgCover="/assets/paid.png"
   cardText="Pagar"></app-small-card>
+  <a [routerLink]="['transfer']">
   <app-small-card
   imgCover="/assets/transfer.png"
   cardText="Transferir"></app-small-card>
+</a>
   <app-small-card
   imgCover="/assets/phone.png"
   cardText="Recarga"></app-small-card>
 </div>
   <app-card-info></app-card-info>
+  <router-outlet></router-outlet>
   </div>

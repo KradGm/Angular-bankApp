@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  myApi:'https://santanderapi-production.up.railway.app/users/'
+  myApiURL:'https://santanderapi-production.up.railway.app',
+  myApi:'https://santanderapi-production.up.railway.app',
+  APIregister:'https://santanderapi-production.up.railway.app/users',
+  admUserName:'admin',
+  admPassword:'admin'
 };
 
 /*

@@ -1,5 +1,5 @@
 export type Account = {
-  id: number;
+  id?: number;
   number: string;
   agency: string;
   balance: number;
@@ -7,25 +7,32 @@ export type Account = {
 };
 
 export type Card = {
-  id: number;
+  id?: number;
   number: string;
   limit: number;
 };
 
 export type Feature = {
-  id: number;
+  id?: number;
   icon: string;
   description: string;
 };
 
+export type History ={
+  id?: number;
+  value: number;
+  userName:string;
+  transactionDate:Date;
+  description:String;
+}
 export type News = {
-  id: number;
+  id?: number;
   icon: string;
   description: string;
 };
 
 export type User = {
-  id: number;
+  id?: number;
   name: string;
   account: Account;
   card: Card;

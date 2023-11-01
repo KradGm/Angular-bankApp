@@ -11,7 +11,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FormsModule } from '@angular/forms';
 import { BigCardComponent } from './components/big-card/big-card.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
-import { SmallCardComponent } from './components/small-card/small-card.component'; // Importe o FormsModule aqui
+import { SmallCardComponent } from './components/small-card/small-card.component';
+import { TransferPageComponent } from './pages/transfer-page/transfer-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { AdmLoginPageComponent } from './pages/adm-login-page/adm-login-page.component'; // Importe o FormsModule aqui
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { SmallCardComponent } from './components/small-card/small-card.component
     HomePageComponent,
     BigCardComponent,
     CardInfoComponent,
-    SmallCardComponent
+    SmallCardComponent,
+    TransferPageComponent,
+    RegisterPageComponent,
+    AdmLoginPageComponent
   ],
   imports: [
     BrowserModule,

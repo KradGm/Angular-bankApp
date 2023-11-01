@@ -1,15 +1,16 @@
 <div class="user-info">
   <div class="user-container">
     <div class="user-name">
-      <p>Ola, {{userName}}</p>
+      <p>Hello, {{ userName }}</p>
     </div>
   </div>
   <div class="account-container">
     <div class="account-agency">
-      <h3>{{agency}}</h3>
+      <h3>{{ agency }}</h3>
     </div>
     <div class="account-number">
-      <h3>{{accountNumber}}</h3>
+      <h3>{{ accountNumber }}</h3>
     </div>
   </div>
+  <button *ngIf="id === 1" (click)="goToAdminPage()">Admin Login</button>
 </div>

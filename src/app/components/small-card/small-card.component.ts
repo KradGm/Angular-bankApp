@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-small-card',
@@ -12,9 +13,9 @@ export class SmallCardComponent implements OnInit {
 
   @Input()
   cardText:string=""
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-  }
 
+  }
 }
