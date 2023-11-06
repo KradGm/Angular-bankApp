@@ -39,7 +39,6 @@ export class UserInfoComponent implements OnInit {
   }
 
   goToAdminPage() {
-    // Redirecionar para a página de administração se o ID for 1
-    this.router.navigate(['/app', this.id, 'adm-login']);
+    this.router.navigate(['/app', this.id, 'adm-login'], { queryParams: { id: this.id } });
   }
 }

@@ -1,3 +1,7 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
 <div class="header-bg">
 <header class="header-menu">
   <app-menu></app-menu>
@@ -6,13 +10,19 @@
   <div class="red-bg">
     <app-user-info>
   </app-user-info>
+
   <app-big-card
-  imgCover="/assets/money1.png"></app-big-card>
+  imgCover="/assets/money1.png">
+</app-big-card>
+
 </div>
 <div class="small-cards">
+
   <app-small-card
   imgCover="/assets/paid.png"
-  cardText="Pagar"></app-small-card>
+  cardText="Pagar">
+</app-small-card>
+
   <a [routerLink]="['transfer']">
   <app-small-card
   imgCover="/assets/transfer.png"
@@ -21,7 +31,17 @@
   <app-small-card
   imgCover="/assets/phone.png"
   cardText="Recarga"></app-small-card>
+  <button *ngIf="id === 1" (click)="goToAdminPage()">
+    <app-small-card
+    cardText="Adm Login"
+    imgCover="/assets/adm3.png"
+  >
+  </app-small-card>
+  </button>
+
 </div>
+
+
   <app-card-info></app-card-info>
   <router-outlet></router-outlet>
   </div>

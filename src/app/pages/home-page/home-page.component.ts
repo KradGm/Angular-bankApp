@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -7,10 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() { }
+  id:number =0;
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.route.params.subscribe(params => {
+      this.id = +params['id'];
+    });
+   }
 
   ngOnInit(): void {
+    console.log(this.id)
   }
-
+  goToAdminPage() {
+    this.router.navigate(['/app', this.id, 'adm-login']);
+  }
 }
