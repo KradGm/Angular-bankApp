@@ -13,7 +13,7 @@ import { BigCardComponent } from './components/big-card/big-card.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { SmallCardComponent } from './components/small-card/small-card.component';
 import { TransferPageComponent } from './pages/transfer-page/transfer-page.component';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { AdmPageComponent } from './pages/adm-page/adm-page.component';
 import { AdmLoginPageComponent } from './pages/adm-login-page/adm-login-page.component'; // Importe o FormsModule aqui
 
 
@@ -28,7 +28,7 @@ import { AdmLoginPageComponent } from './pages/adm-login-page/adm-login-page.com
     CardInfoComponent,
     SmallCardComponent,
     TransferPageComponent,
-    RegisterPageComponent,
+    AdmPageComponent,
     AdmLoginPageComponent
   ],
   imports: [

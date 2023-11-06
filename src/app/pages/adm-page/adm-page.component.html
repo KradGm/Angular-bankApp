@@ -19,4 +19,20 @@
   <!-- Repita o processo para outros campos do formulário, como account, card, features, news, e history -->
 
   <button type="submit">Enviar</button>
+
+
 </form>
+
+<div *ngFor="let user of users">
+  <div>{{ user.name }}</div>
+  <button (click)="selectUser(user)">Selecionar</button>
+</div>
+<div *ngIf="selectedUser">
+  <h3>Deletar usuario: {{ selectedUser.name }}</h3>
+  <p>Id do usuario: {{selectedUser.id}}</p>
+  <p>Agência: {{ selectedUser.account.agency }}</p>
+  <p>Conta: {{ selectedUser.account.number }}</p>
+
+  <button (click)="deleteUser(recipientId)">Deletar</button>
+
+</div>

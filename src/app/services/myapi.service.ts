@@ -28,8 +28,8 @@ export class MyapiService {
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.baseURL}/users`);
   }
-  remove(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.baseURL}/${id}`);
+  remove(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseURL}/users/${id}`);
   }
   put(id: number, user: User): Observable<User> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });

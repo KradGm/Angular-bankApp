@@ -1,14 +1,14 @@
-<div *ngFor="let pessoa of pessoas">
-  <div>{{ pessoa.name }}</div>
-  <button (click)="selecionarPessoa(pessoa)">Selecionar</button>
+<div *ngFor="let user of users">
+  <div>{{ user.name }}</div>
+  <button (click)="selecionarPessoa(user)">Selecionar</button>
 </div>
 
-<div *ngIf="pessoaSelecionada">
-  <h3>Transferência para: {{ pessoaSelecionada.name }}</h3>
-  <p>Agência: {{ pessoaSelecionada.account.agency }}</p>
-  <p>Conta: {{ pessoaSelecionada.account.number }}</p>
+<div *ngIf="selectedUser">
+  <h3>Transferência para: {{ selectedUser.name }}</h3>
+  <p>Agência: {{ selectedUser.account.agency }}</p>
+  <p>Conta: {{ selectedUser.account.number }}</p>
 
   <label for="valorTransferencia">Valor da Transferência:</label>
-  <input type="number" [(ngModel)]="valorTransferencia">
-  <button (click)="realizarTransferencia()" [disabled]="valorTransferencia > accountValue">Transferir</button>
+  <input type="number" [(ngModel)]="transferValueInput">
+  <button (click)="realizarTransferencia()" [disabled]="transferValueInput > accountValue">Transferir</button>
 </div>

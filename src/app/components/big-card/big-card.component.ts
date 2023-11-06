@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AccountDataService } from 'src/app/services/account-data.service';
 import { Account } from 'src/app/models/User';
 import { MyapiService } from 'src/app/services/myapi.service';
 import { ActivatedRoute, Route } from '@angular/router';
@@ -17,7 +16,6 @@ export class BigCardComponent implements OnInit {
   account:Account;
   accountTotal!:number;
   constructor(
-    private accountService:AccountDataService,
     private service:MyapiService,
     private route:ActivatedRoute,
     ){

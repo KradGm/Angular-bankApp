@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { User, Account, Card } from 'src/app/models/User';
-import { AccountDataService } from 'src/app/services/account-data.service';
 import { MyapiService } from 'src/app/services/myapi.service';
 import { ActivatedRoute, Route } from '@angular/router';
 
@@ -17,7 +16,6 @@ export class CardInfoComponent implements OnInit {
   cardNumber!: string;
   lastFourDigits!:string;
   constructor(
-    private accountService: AccountDataService,
     private service: MyapiService,
     private route: ActivatedRoute,
   ) {

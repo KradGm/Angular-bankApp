@@ -11,14 +11,14 @@ import { MyapiService } from 'src/app/services/myapi.service';
   styleUrls: ['./transfer-page.component.css']
 })
 export class TransferPageComponent implements OnInit {
-  pessoas: User[] = [];
+  users: User[] = [];
   id!: number;
-  destinatarioId!: number;
+  recipientId!: number;
   name!: string;
   accountValue!: number;
   account: Account;
-  pessoaSelecionada: User | null = null;
-  valorTransferencia: number = 0;
+  selectedUser: User | null = null;
+  transferValueInput: number = 0;
 
   constructor(
     private http: HttpClient,
@@ -43,7 +43,7 @@ export class TransferPageComponent implements OnInit {
   ngOnInit(): void {
     this.getAccount(this.id);
     this.service.getUsers().subscribe((data: User[]) => {
-      this.pessoas = data;
+      this.users = data;
     });
   }
 
@@ -51,9 +51,9 @@ export class TransferPageComponent implements OnInit {
   Esse metodo serve para selecionar um usuario da minha lista completa de usuarios
   */
   selecionarPessoa(pessoa: User) {
-    this.pessoaSelecionada = pessoa;
+    this.selectedUser = pessoa;
     if (pessoa.id !== undefined)
-      this.destinatarioId = pessoa.id;
+      this.recipientId = pessoa.id;
   }
   /*
   Esse metodo é a consolidação da transferencia, fazendo as verificações de valores
@@ -61,39 +61,39 @@ export class TransferPageComponent implements OnInit {
   Montando o historico de transferencia de recebimento(Destinatario)
   */
   realizarTransferencia() {
-    if (this.pessoaSelecionada && this.valorTransferencia <= this.account.balance) {
-      if (this.valorTransferencia <= 0) {
+    if (this.selectedUser && this.transferValueInput <= this.account.balance) {
+      if (this.transferValueInput <= 0) {
         console.log('O valor de transferência deve ser maior que zero.');
         return;
       }
 
-      if (this.valorTransferencia > this.accountValue) {
+      if (this.transferValueInput > this.accountValue) {
         console.log('Saldo insuficiente para realizar a transferência.');
         return;
       }
 
-      const valorTransferencia = this.valorTransferencia;
-      const destinatario = this.pessoaSelecionada;
+      const finalTransferValue = this.transferValueInput;
+      const recipient = this.selectedUser;
 
-      this.account.balance -= valorTransferencia;
+      this.account.balance -= finalTransferValue;
 
-      const historicoSaida: History = {
-        value: -valorTransferencia, // Valor negativo para saída
-        userName: destinatario.name, // Nome do destinatário
+      const transferHistorySender: History = {
+        value: -finalTransferValue, // Valor negativo para saída
+        userName: recipient.name, // Nome do destinatário
         transactionDate: new Date(), // Data atual
-        description: 'Transferência para ' + destinatario.name,
+        description: 'Transferência para ' + recipient.name,
       };
 
-      destinatario.account.balance += valorTransferencia;
+      recipient.account.balance += finalTransferValue;
 
-      const historicoEntrada: History = {
-        value: valorTransferencia,
-        userName: this.pessoaSelecionada.name, // Seu nome (ou quem está fazendo a transferência)
+      const transferHistoryRecipient: History = {
+        value: finalTransferValue,
+        userName: this.selectedUser.name, // Seu nome (ou quem está fazendo a transferência)
         transactionDate: new Date(),
         description: 'Recebido de ' + this.name,
       };
 
-      this.transferService.transferValueWithHistory(this.id, this.destinatarioId, destinatario, valorTransferencia, historicoSaida, historicoEntrada)
+      this.transferService.transferValueWithHistory(this.id, this.recipientId, recipient, finalTransferValue, transferHistorySender, transferHistoryRecipient)
         .subscribe({
           next: (hist) => {
             console.log('Transferência registrada no histórico com sucesso.', hist);

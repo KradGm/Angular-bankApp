@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { TransferPageComponent } from './pages/transfer-page/transfer-page.component';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { AdmPageComponent } from './pages/adm-page/adm-page.component';
 import { AdmLoginPageComponent } from './pages/adm-login-page/adm-login-page.component';
 
 const routes: Routes = [
@@ -35,7 +35,7 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegisterPageComponent,
+    component: AdmPageComponent,
   },
 ];
 

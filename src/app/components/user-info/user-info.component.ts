@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MyapiService } from 'src/app/services/myapi.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AccountDataService } from 'src/app/services/account-data.service';
 
 @Component({
   selector: 'app-user-info',
@@ -17,7 +16,6 @@ export class UserInfoComponent implements OnInit {
   constructor(
     private service: MyapiService,
     private route: ActivatedRoute,
-    private accountService: AccountDataService,
     private router: Router
   ) {
     const idParam = this.route.snapshot.paramMap.get('id');
@@ -36,7 +34,6 @@ export class UserInfoComponent implements OnInit {
         this.userName = res.name;
         this.accountNumber = res.account.number;
         this.agency = res.account.agency;
-        this.accountService.setBalance(res.account.balance);
       },
     });
   }
